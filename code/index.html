@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body{
+            font-family: 'Lucida Grande','Trebuchet MS','Hiragino Sans GB','Segoe UI Light','Segoe UI','Microsoft Jhenghei','微软雅黑',sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: #666666;
+        }
+        #container {text-align: center; height: 547px;}
+        .title {font-size: 60px;  margin-top: 80px;}
+        .word {margin-top: 50px; line-height: 2;}
+        .msg_1 {font-size: 15px;}
+        .copyright {font: 14px tahoma; margin-top: 50px;}
+
+        .login_content_wrap {width:400px; height: 280px; border:5px dotted #000; border-radius: 15px; margin: 40px auto 0; padding: 35px 25px; box-sizing:border-box;}
+        .bd {}
+        .login_title {height: 20px; line-height: 20px; color: #666666; font-size: 18px; font-weight: 700;}
+        .uid_text, .pwd_text {border: 0; text-align: center; width: 300px; font-size: 15px; height: 30px; }
+        .uid_text {margin: 20px auto 10px; border-bottom: 1px solid #000; }
+        .pwd_text {margin: 10px auto 20px; border-bottom: 1px solid #000; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="title">WebChat</div>
+        <div class="word">
+            <div class="msg_1">Another feeling to try</div>
+        </div>
+
+        <div id="content_wrap" class="content_wrap" style="display:none;">
+            <div class="webChat_wrap">
+                <a class="img_wrap" href="#"><img src="../pic/index/QQBanner.png" alt="QQ banner"></a>
+                <a class="text_wrap" href="#">Try it now!</a>
+            </div>
+        </div>
+
+        <div id="login_content_wrap" class="login_content_wrap">
+            <div class="bd">
+                <div class="login_title">账户登录</div>
+                <form action="" method="POST">
+
+                    <div class="uid_wrap form_item"><input class="uid_text" type="text" placeholder="Hey, tell me your email or nickname" style="border:0;"></div>
+                    <div class="pwd_wrap form_item"><input class="pwd_text" type="password" placeholder="Password to confirm :) A guy is behind you!"></div>
+
+                    <div class="fpwd_wrap"><a href="#" class="fpwd">忘记密码</a></div>
+                    <div class="reg_wrap"><a href="#" class="reg">免费注册</a></div>
+                    <button type="submit" class="login_btn">登录</button>
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="copyright">Copyright©2016 Kapon Leo. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+</html>

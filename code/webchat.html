@@ -3,6 +3,13 @@
  * @DateTime:    2016-04-08 17:16:28
  * @Description: 边栏的基本框架搭建
  *               前端模块未完成：1.右侧对话框基本框架 2.主内容区样式 3.js动态效果
+-->
+<!--
+ * @Author:      kapon leo
+ * @DateTime:    2016-04-08 20:22:02
+ * @Description: 右侧对话框基本框架
+ *               前端模块未完成： 1.主内容区样式 2. js动态页面实现
+ *
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,130 +21,144 @@
   <style>
     .bc > img {width: 100%; height: 100%; position: absolute; z-index: -1;}
     /*@media (min-width: 1000px)*/
-    .main_container {width: 280px; height: 100%; float: left; background-color: orange;}
-
+    #main_container {width: 280px; height: 100%; float: left; background-color: orange;}
+    #container {background-color: green;}
   </style>
 </head>
 <body>
-  <div class="bc">
-    <img src="../pic/webchat/background.jpg" alt="bg">
-  </div>
+  <div class="bc"><img src="../pic/webchat/background.jpg" alt="bg"></div>
   <div class="wrap">
-    <div class="main_container">
+    <div id ="main_container">
       <div class="pannel main_pannel" id="pannel-0">
-       <!-- side:body -->
-       <div id="pannelBodyWrap-0" class="pannel_body_container">
-        <div class="pannelBody-0" id="pannel_body">
-          <div id="mainToAll">
-            <div class="accountHeader">
-              <div class="avatar_wrap"><img src="../pic/index/QQBanner.png" alt="photo" style="width:40px; height:40px;"></div>
-              <span class="text_ellipsis user_nickname">nick name</span>
-              <div class="wel_text_wrap"><span class="wel_text">Nice try! Welcome to WebChat!</span></div>
-            </div>
-          </div>
-          <div class="pannel" id="panel-1">
-            <header id="pannelHeader-1" class="pannel_header">
-              <h1 id="pannelTitle-1" class="text_ellipsis">Session</h1>
-            </header>
-            <div class="pannelBodyodyWrap-1" id="pannel_body_container">
-              <div id="pannelBody-1" class="pannel_body">
-                <div id="current_chat_scroll_area" class="scroll_wrap">
-                  <ul id="current_chat_list" class="list list_white">
-                    <!-- js operation to show items -->
-                  </ul>
-                  <!-- 滚动条 -->
-                  <div></div>
-                </div>
+        <!-- side:body -->
+        <div id="pannelBodyWrap-0" class="pannel_body_container">
+          <div class="pannelBody-0" id="pannel_body">
+            <div id="mainToAll">
+              <div class="accountHeader">
+                <div class="avatar_wrap"><img src="../pic/index/QQBanner.png" alt="photo" style="width:40px; height:40px;"></div>
+                <span class="text_ellipsis user_nickname">nick name</span>
+                <div class="wel_text_wrap"><span class="wel_text">Nice try! Welcome to WebChat!</span></div>
               </div>
             </div>
-          </div>
-          <div class="pannel" id="panel-2">
-            <header id="pannelHeader-2" class="pannel_header">
-              <h1 id="pannelTitle-2" class="text_ellipsis">Contact</h1>
-              <button id="pannelRightBtn-2" class="btn btn_small btn_right btn_search">
-                <span id="pannelRightBtnText-2" class="btn_text">Search</span>
-              </button>
-            </header>
-            <div class="pannelBodyodyWrap-2" id="pannel_body_container">
-              <div id="pannelBody-2" class="pannel_body">
-                <div id="list_scroll_area" class="scroll_area">
-                  <ul id="friend_list">
-                    <!-- js operation -->
-                  </ul>
-                  <div>
+            <div class="pannel" id="panel-1">
+              <header id="pannelHeader-1" class="pannel_header">
+                <h1 id="pannelTitle-1" class="text_ellipsis">Session</h1>
+              </header>
+              <div class="pannelBodyodyWrap-1" id="pannel_body_container">
+                <div id="pannelBody-1" class="pannel_body">
+                  <div id="current_chat_scroll_area" class="scroll_wrap">
+                    <ul id="current_chat_list" class="list list_white">
+                      <!-- js operation to show items -->
+                    </ul>
                     <!-- 滚动条 -->
+                    <div></div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pannel" id="panel-3">
-            <header id="pannelHeader-3" class="pannel_header">
-              <h1 id="pannelTitle-3" class="text_ellipsis"></h1>
-            </header>
-            <div class="pannelBodyodyWrap-3" id="pannel_body_container">
-              <div id="pannelBody-3" class="pannel_body setting">
-                <div class="group">
-                  <div class="row clearfix">
-                    <div class="column">
-                      <img src="../pic/index/QQBanner.png" alt="photo">
+            <div class="pannel" id="panel-2">
+              <header id="pannelHeader-2" class="pannel_header">
+                <h1 id="pannelTitle-2" class="text_ellipsis">Contact</h1>
+                <button id="pannelRightBtn-2" class="btn btn_small btn_right btn_search">
+                  <span id="pannelRightBtnText-2" class="btn_text">Search</span>
+                </button>
+              </header>
+              <div class="pannelBodyodyWrap-2" id="pannel_body_container">
+                <div id="pannelBody-2" class="pannel_body">
+                  <div id="list_scroll_area" class="scroll_area">
+                    <ul id="friend_list">
+                      <!-- js operation -->
+                    </ul>
+                    <div>
+                      <!-- 滚动条 -->
                     </div>
-                    <div class="column profile_title_setting">
-                      <div class="row profile_nickName text_ellipsis">Default Nick Name</div>
-                      <div class="row profile_account">Default Email Addr</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pannel" id="panel-3">
+              <header id="pannelHeader-3" class="pannel_header">
+                <h1 id="pannelTitle-3" class="text_ellipsis"></h1>
+              </header>
+              <div class="pannelBodyodyWrap-3" id="pannel_body_container">
+                <div id="pannelBody-3" class="pannel_body setting">
+                  <div class="group">
+                    <div class="row clearfix">
+                      <div class="column">
+                        <img src="../pic/index/QQBanner.png" alt="photo">
+                      </div>
+                      <div class="column profile_title_setting">
+                        <div class="row profile_nickName text_ellipsis">Default Nick Name</div>
+                        <div class="row profile_account">Default Email Addr</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="group clickAble">
-                  <div class="row">
-                    About WebChat
-                    <span class="more_icon"></span>
+                  <div class="group clickAble">
+                    <div class="row">
+                      About WebChat
+                      <span class="more_icon"></span>
+                    </div>
                   </div>
-                </div>
-                <div class="group" id="about_webchat_all">
-                  <div class="row">
-                    <span class="label">Current Version</span>
+                  <div class="group" id="about_webchat_all">
+                    <div class="row">
+                      <span class="label">Current Version</span>
+                    </div>
+                    <div class="row">FeedBack
+                      <span class="more_icon"></span>
+                    </div>
                   </div>
-                  <div class="row">FeedBack
-                    <span class="more_icon"></span>
+                  <div class="group clickAble">
+                    <div class="row logout">Log Out</div>
                   </div>
-                </div>
-                <div class="group clickAble">
-                  <div class="row logout">Log Out</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- side-footer -->
+        <footer id="pannelFooter-0">
+          <nav id="nav_tab">
+            <ul class="nav_tab_head">
+              <li id="session" class="contact"><a>
+                <div class="icon"></div>
+                <span>Session</span>
+              </a></li>
+              <li id="Contact" class="conversation"><a>
+                <div class="icon"></div>
+                <span>Contact</span>
+              </a></li>
+              <li id="setting" class="setup"><a>
+                <div class="icon"></div>
+                <span>Setting</span>
+              </a></li>
+            </ul>
+            <div class="suggestion">
+              <a href="#">Feed back</a>
+            </div>
+          </nav>
+        </footer>
       </div>
-      <!-- side-footer -->
-      <footer id="pannelFooter-0">
-        <nav id="nav_tab">
-          <ul class="nav_tab_head">
-            <li id="session" class="contact"><a>
-              <div class="icon"></div>
-              <span>Session</span>
-            </a></li>
-            <li id="Contact" class="conversation"><a>
-              <div class="icon"></div>
-              <span>Contact</span>
-            </a></li>
-            <li id="setting" class="setup"><a>
-              <div class="icon"></div>
-              <span>Setting</span>
-            </a></li>
-          </ul>
-          <div class="suggestion">
-            <a href="#">Feed back</a>
+    </div>
+    <!-- conversation-window -->
+    <div class="container" id="container">
+      <div class="pannel chat_pannel" id="pannel-5">
+        <header id="pannelHeader-5" class="pannel_header">
+          <h1 id="pannelTitle-5" class="text_ellipsis">Anonymous</h1>
+          <button id="pannelRightBtn-5" class="btn btn_small btn_right btn_black btn_click">
+            <span id="panneRightBtnText-5" class="btn_text">Close</span>
+          </button>
+        </header>
+        <div id="pannelBodyWrap-5" class="pannel_body_container">
+          <div id="pannelBody-5" class="pannel_body chat_container"></div>
+        </div>
+        <footer id="pannelFooter-5" class="chat_toolBar_footer">
+          <div class="chat_toolBar">
+            <textarea name="" id="chat_textarea" cols="30" rows="10" class="input"></textarea>
+            <button id="send_chat_btn" class="btn btn_small btn_blue">send</button>
           </div>
-        </nav>
-      </footer>
+        </footer>
+      </div>
     </div>
   </div>
-
-  <!-- conversation-window -->
-  <div class="container" id="container">
-  </div>
-</div>
 </body>
 </html>
